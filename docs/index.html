@@ -26,8 +26,8 @@
         successText: '💚 copied'
       },
       themeable: {
-          readyTransition : true, // default
-          responsiveTables: true  // default
+        readyTransition : true, // default
+        responsiveTables: true  // default
       },
       coverpage: true,
       tabs: {
@@ -36,7 +36,23 @@
         theme      : 'classic', // default
         tabComments: true,      // default
         tabHeadings: true       // default
-      }
+      },
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<footer class="footer">',
+            '<hr>',
+            '<small>',
+            '   © <time datetime="2021">2021</time>. All rights reserved.',
+            '   <a href="https://redhatlabs.dev/#">Contact</a>',
+            '</small>',
+            '</footer>'
+          ].join('');
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
@@ -48,7 +64,6 @@
   <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-groovy.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- docsify-themeable (latest v0.x.x) -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 
   <style>
@@ -65,6 +80,30 @@
       --base-background-color: #fff;
       --navbar-root-color: var(--mono-tint3);
     }
+    .giscus, .giscus-frame {
+       width: 75%;
+       position: absolute;
+       right: 60px;
+       bottom: 90px;
+    }
+    .giscus-frame {
+      border: none;
+    }
+    footer {
+      display: block;
+    }
   </style>
+  <script src="https://giscus.app/client.js"
+    data-repo="eformat/special-potato"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkzOTQ0NzYwMDQ="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOF4M55M4B-nPl"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-theme="light"
+    crossorigin="anonymous"
+    async>
+  </script>
 </body>
 </html>
