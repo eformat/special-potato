@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
   <div id="app"></div>
@@ -25,10 +25,7 @@
         errorText  : '😔',
         successText: '💚 copied'
       },
-      themeable: {
-        readyTransition : true, // default
-        responsiveTables: true  // default
-      },
+      themeColor: '#CC0000',
       coverpage: true,
       tabs: {
         persist    : true,      // default
@@ -64,7 +61,6 @@
   <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-groovy.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   <!--script src="//cdn.jsdelivr.net/npm/docsify-example-panels"-->
 
   <style>
@@ -75,17 +71,13 @@
       content: "!";
       background-color: #4D4D4D;
     }
-    :root {
-      --base-font-size: 15px;
-      --theme-color   : #CC0000;
-      --base-background-color: #fff;
-      --navbar-root-color: var(--mono-tint3);
+    .sidebar {
+       background-color: var(--mono-tint3);
     }
     .giscus, .giscus-frame {
        width: 75%;
        position: absolute;
        right: 60px;
-       bottom: 5px;
     }
     .giscus-frame {
       border: none;
