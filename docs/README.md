@@ -1,5 +1,10 @@
 # The People, Code, Architecture and Practices of Labs
 
+<!-- panels:start -->
+<!-- div:floating-cat -->
+<img src="images/daisy.png">
+<!-- panels:end -->
+
 <!-- tabs:start -->
 
 #### **English**
