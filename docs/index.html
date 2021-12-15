@@ -64,6 +64,47 @@
   <!--script src="//cdn.jsdelivr.net/npm/docsify-example-panels"-->
 
   <style>
+    input[type=text] {
+      padding: 8px 12px;
+      /* display: inline-block; */
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type=text]:focus {
+      outline: none !important;
+      border: 2px solid #F5606D;
+    }
+    .team-name-form {
+      margin-left: 0%;
+      background-color: #f3f3f3;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .team-inputs {
+      flex: 1;
+    }
+    .team-inputs:first-child {
+      /* margin-right: 30%; */
+    }
+    .team-inputs:input,label {
+      font-size: 12px;
+      display: block;
+    }
+    .storage-btns {
+      font-size: 12px;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #FAB6B6;
+      color: black;
+      border: 2px solid #FAB6B6; 
+      width: 130px; 
+      text-align: center;
+    }
     p.tip {
       border-left-color: #4D4D4D;
     }
@@ -72,23 +113,18 @@
       background-color: #4D4D4D;
     }
     .sidebar {
-      background-color: #f3f3f3;
-    }
-    .giscus, .giscus-frame {
-       width: 75%;
-       position: absolute;
-       right: 60px;
-    }
-    .giscus-frame {
-      border: none;
-    }
-    footer {
-      display: block;
+       background-color: #f3f3f3;
     }
     :root {
       --base-font-size: 14px;
+      --base-font-family: "RedHatText",Overpass,"Open Sans",Helvetica,Arial,sans-serif;
       --theme-color: #CC0000;
       --content-max-width: 75em;
+      --sidebar-width: 22rem;
+      --sidebar-nav-pagelink-background-image             : ;
+      --sidebar-nav-pagelink-background-image--active     : ;
+      --sidebar-nav-pagelink-background-image--collapse   : ;
+      --sidebar-nav-pagelink-background-image--loaded     : ;
     }
   </style>
   <script src="https://giscus.app/client.js"
