@@ -11,6 +11,7 @@
 <body>
 
   <div class="team-name-form">
+
       <div class="team-inputs">
         <label for="tname">Team Name</label><br/>
         <input type="text" id="tname" name="teamname" placeholder="Your team name..">
@@ -54,7 +55,7 @@
         alert('Please enter a team name');
         return;
       }
-      if (cdomain == '') {        
+      if (cdomain == '') {
         alert('Please enter a cluster domain');
         return;
       }
@@ -84,7 +85,12 @@
     }
 
     window.$docsify = {
-      name: 'The People, Code, Architecture and Practices of Labs',
+      name: (
+        '<img'
+        + '  src="images/redhatone.svg"'
+        + '  width="300"'
+        + '/>'
+      ), 
       repo: 'https://github.com/eformat/special-potato',
       loadSidebar: true,
       subMaxLevel: 0,
@@ -111,7 +117,7 @@
             '<footer class="footer">',
             '<hr>',
             '<small>',
-            '   © <time datetime="2021">2021</time>. All rights reserved.',
+            '   © <time datetime="2025">2025</time>. All rights reserved.',
             '   <a href="https://redhatlabs.dev/#">Contact</a>',
             '</small>',
             '</footer>'
@@ -149,9 +155,19 @@
       outline: none !important;
       border: 2px solid #F5606D;
     }
+    .github-corner {
+      svg {
+        fill: #CC0000 !important;
+      }
+    }
+    .sidebar {
+      a {
+        color: white !important;
+      }
+    }
     .team-name-form {
       margin-left: 0%;
-      background-color: #f3f3f3;
+      background-color: black;
       padding-left: 20%;
       padding-right: 20%;
       padding-top: 10px;
@@ -159,8 +175,12 @@
       display: flex;
       align-items: center;
     }
+    .team-name-logo {
+      margin-left: 0%;
+    }
     .team-inputs {
       flex: 1;
+      color: white;
     }
     .team-inputs:first-child {
       /* margin-right: 30%; */
@@ -239,7 +259,7 @@
       background-color: #4D4D4D;
     }
     .sidebar {
-      background-color: #f3f3f3;
+      background-color: black;
     }
     .giscus, .giscus-frame {
        width: 75%;
@@ -251,6 +271,26 @@
     }
     footer {
       display: block;
+    }
+    .sidebar-nav > ul > li > ul > li > ul > li > ul {
+      color: white;
+    }
+    @font-face {
+      font-family: 'RedHatText';
+      src: url('fonts/RedHatDisplay-BlackItalic.woff) format('woff')
+          url('fonts/RedHatDisplay-Black.woff) format('woff')
+          url('fonts/RedHatDisplay-BoldItalic.woff) format('woff')
+          url('fonts/RedHatDisplay-Bold.woff) format('woff')
+          url('fonts/RedHatDisplay-Italic.woff) format('woff')
+          url('fonts/RedHatDisplay-MediumItalic.woff) format('woff')
+          url('fonts/RedHatDisplay-Medium.woff) format('woff')
+          url('fonts/RedHatDisplay-Regular.woff) format('woff')
+          url('fonts/RedHatText-BoldItalic.woff) format('woff')
+          url('fonts/RedHatText-Bold.woff) format('woff')
+          url('fonts/RedHatText-Italic.woff) format('woff')
+          url('fonts/RedHatText-MediumItalic.woff) format('woff')
+          url('fonts/RedHatText-Medium.woff) format('woff')
+          url('fonts/RedHatText-Regular.woff) format('woff')
     }
     :root {
       --base-font-size: 14px;
